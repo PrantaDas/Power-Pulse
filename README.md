@@ -1,6 +1,6 @@
 # Power Pulse Bot
 
-Power Pulse Bot is a Telegram bot designed to provide users of DESCO (Preapaid User), a prominent electricity provider company in Bangladesh, with convenient access to their account details and related information.
+Power Pulse Bot is a Telegram bot designed to provide users of [DESCO](https://desco.gov.bd/) (Preapaid User), a prominent electricity provider company in Bangladesh, with convenient access to their account details and related information.
 
 ## Motivation
 The motivation behind the development of Power Pulse Bot is to simplify and streamline the process for DESCO customers to access their electricity-related information. By leveraging the Telegram platform, users can effortlessly check their account details, balance, and daily usage, enhancing their overall experience with DESCO services.
