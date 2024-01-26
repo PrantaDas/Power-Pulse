@@ -52,4 +52,4 @@ Power Pulse Bot is developed and maintained by [Pranta Das](https://github.com/P
 Use this bot responsibly and adhere to ethical development practices.
 
 
-Made with :love: by [Pranta Das](https://github.com/Prantadas)
+Made with ❤️ by [Pranta Das](https://github.com/Prantadas)
