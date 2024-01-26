@@ -12,7 +12,26 @@ keyboard = InlineKeyboardMarkup()
 keyboard.add(info_btn,check_balance_btn,today_consump_btn,see_usage_btn)
 
 def check_user(db:Database):
+    """
+    Middleware to check and handle user interactions when starting the bot.
+
+    Parameters:
+    - db (Database): The Database instance for user data storage.
+
+    Returns:
+    Callable: Middleware function to handle user interactions.
+    """
     def middleware_handler(bot:TeleBot,message:Message, *args, **kwargs) -> None:
+        """
+        Handle user interactions when starting the bot.
+
+        Parameters:
+        - bot (TeleBot): The TeleBot instance.
+        - message (Message): The message object received from the user.
+
+        Returns:
+        None
+        """
         if message.text != '/start':
             return
         user = db.find_one(message.from_user.id)

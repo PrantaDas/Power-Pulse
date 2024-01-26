@@ -32,7 +32,20 @@ def check_envs_and_values(env_var_names: List[str]) -> None:
 
 
 def format_user_info(data: Dict[str, str]) -> str:
+    """
+    Format user information into a string with HTML tags for rich text display.
 
+    Parameters:
+    - data (Dict[str, str]): A dictionary containing user information.
+
+    Returns:
+    - str: A formatted string with HTML tags for rich text display.
+
+    Example:
+    >>> user_data = {'accountNo': '123456', 'contactNo': '987654321', ...}
+    >>> formatted_text = format_user_info(user_data)
+    => Returns a formatted string ready for display in a messaging platform.
+    """
     message = """
             <b>🟢 Customer &#9; Information 🟢</b>
             <b>🔢 Account No :{accountNo}</b>

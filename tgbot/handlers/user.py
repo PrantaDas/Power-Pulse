@@ -7,10 +7,39 @@ from tgbot.utils.database import Database
 from datetime import datetime, timedelta
 
 def any_user(message:Message, bot:TeleBot) -> None:
+    """
+    Handle messages from any user.
+
+    Parameters:
+    - message (Message): The message object received from the user.
+    - bot (TeleBot): The TeleBot instance.
+
+    Returns:
+    None
+    """
     return
 
 def handle_info(bot:TeleBot, db:Database):
+    """
+    Handle user information queries and related actions.
+
+    Parameters:
+    - bot (TeleBot): The TeleBot instance.
+    - db (Database): The Database instance for user data storage.
+
+    Returns:
+    Callable: Function to handle user information queries.
+    """
     def get_user_info(call:CallbackQuery):
+        """
+        Get and display user information based on the callback query.
+
+        Parameters:
+        - call (CallbackQuery): The callback query received.
+
+        Returns:
+        None
+        """
         user = db.find_one(call.from_user.id)
         acc_no = user.get('acountNo')
         if call.data =='userInfo':
@@ -65,7 +94,26 @@ def handle_info(bot:TeleBot, db:Database):
     return get_user_info
 
 def get_account_number(bot:TeleBot,db:Database):
+    """
+    Prompt user to provide an account number and fetch information.
+
+    Parameters:
+    - bot (TeleBot): The TeleBot instance.
+    - db (Database): The Database instance for user data storage.
+
+    Returns:
+    Callable: Function to handle fetching information based on the provided account number.
+    """
     def fetch_info(message:Message):
+        """
+        Fetch and display user information based on the provided account number.
+
+        Parameters:
+        - message (Message): The message object containing the account number.
+
+        Returns:
+        None
+        """
         account = message.text
         data = {
             "acountNo":account
