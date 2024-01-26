@@ -1,0 +1,2 @@
+BOT_TOKEN="6828366660:AAG165iuYBZnEDFwsdIc0RT7rhvy09D9AT0"
+DESKO_BASE_URL="http://prepaid.desco.org.bd/api"
